@@ -1,0 +1,18 @@
+{
+  "components": {
+    "sn-component-runtime-dependency-example": {
+      "innerComponents": [],
+      "uiBuilder": {
+        "associatedTypes": [
+          "global.core",
+          "global.landing-page"
+        ],
+        "label": "My Component",
+        "tileIcon": "./tile-icon/generic-tile-icon.svg",
+        "description": "A description of my component",
+        "category": "primitives"
+      }
+    }
+  },
+  "scopeName": "x_snc_cmp_rde"
+}

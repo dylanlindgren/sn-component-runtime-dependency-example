@@ -1,0 +1,25 @@
+{
+  "name": "sn-component-runtime-dependency-example",
+  "version": "0.0.1",
+  "private": false,
+  "description": "Sn Component Runtime Dependency Example",
+  "keywords": [
+    "ServiceNow",
+    "Next Experience UI Component",
+    "sn-component-runtime-dependency-example"
+  ],
+  "readme": "./README.md",
+  "engines": {
+    "node": ">=14"
+  },
+  "module": "src/index.js",
+  "dependencies": {
+    "@servicenow/ui-core": "24.1.1",
+    "@servicenow/ui-renderer-snabbdom": "24.1.1",
+    "@servicenow/sass-kit": "latest"
+  },
+  "devDependencies": {
+    "sass": "1.53.0",
+    "@babel/runtime": "7.18.9"
+  }
+}
