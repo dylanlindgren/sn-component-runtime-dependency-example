@@ -11,29 +11,16 @@ import {
 
 const view = (state, dispatch) => {
 	const { properties } = state;
-
-	function onButtonInsert(vnode) {
-		vnode.elm.addEventListener("sl-blur", (payload) => {
-			dispatch(SHOELACE_BUTTON_BLUR, payload)
-		});
-
-		vnode.elm.addEventListener("sl-focus", (payload) => {
-			dispatch(SHOELACE_BUTTON_FOCUS, payload)
-		});
-
-		vnode.elm.addEventListener("sl-invalid", (payload) => {
-			dispatch(SHOELACE_BUTTON_INVALID, payload)
-		});
-	}
-
-	function onClick() {
-		dispatch(BUTTON_CLICKED)
-	}
-
 	return (
 		<div>
 			{shoelace()}
-			<sl-button hook-insert={onButtonInsert} on-click={onClick} size="large">
+			<sl-button
+				on-sl-focus={(payload) => dispatch(SHOELACE_BUTTON_FOCUS, payload)}
+				on-sl-blur={(payload) => dispatch(SHOELACE_BUTTON_BLUR, payload)}
+				on-sl-invalid={(payload) => dispatch(SHOELACE_BUTTON_INVALID, payload)}
+				on-click={(payload) => dispatch(BUTTON_CLICKED, payload)}
+				size="large"
+			>
 				{properties.label}
 			</sl-button>
 		</div>
