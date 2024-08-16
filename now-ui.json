@@ -1,24 +1,74 @@
 {
   "components": {
-    "snc-wds-runtime-dependency-example": {
+    "snc-wds-sl-qr-code": {
       "properties": [
         {
-          "name": "message",
-          "label": "Message",
+          "name": "value",
+          "label": "Value",
           "required": true,
           "fieldType": "string",
-          "description": "The message to put into the marquee",
-          "defaultValue": "This is an example web component imported through a script tag."
+          "description": "The QR code's value.",
+          "defaultValue": "https://www.servicenow.com"
+        },
+        {
+          "name": "label",
+          "label": "Label",
+          "required": true,
+          "fieldType": "string",
+          "description": "The label for assistive devices to announce. If unspecified, the value will be used instead.",
+          "defaultValue": "Scan this code to visit ServiceNow on the web!"
         }
       ],
       "innerComponents": [],
       "uiBuilder": {
         "associatedTypes": ["global.core", "global.landing-page"],
-        "label": "Marquee Web Component",
-        "tileIcon": "./tile-icon/Marquee.svg",
-        "description": "The Marquee Tag as a Web Component",
+        "label": "QR Code (Shoelace)",
+        "tileIcon": "./tile-icon/qrcode.svg",
+        "description": "Generates a QR code and renders it using the Canvas API.",
         "category": "primitives"
       }
+    },
+    "snc-wds-sl-button": {
+      "properties": [
+        {
+          "name": "label",
+          "label": "Label",
+          "required": true,
+          "fieldType": "string",
+          "description": "The button's label.",
+          "defaultValue": ""
+        }
+      ],
+      "innerComponents": [],
+      "uiBuilder": {
+        "associatedTypes": ["global.core", "global.landing-page"],
+        "label": "Button (Shoelace)",
+        "tileIcon": "./tile-icon/square.svg",
+        "description": "Buttons represent actions that are available to the user.",
+        "category": "primitives"
+      },
+      "actions": [
+        {
+          "name": "SNC_CMP_RDE#SHOELACE_BUTTON_INVALID",
+          "description": "Emitted when the form control has been checked for validity and its constraints aren’t satisfied.",
+          "label": "Invalid"
+        },
+        {
+          "name": "SNC_CMP_RDE#SHOELACE_BUTTON_FOCUS",
+          "description": "Emitted when the button gains focus.",
+          "label": "Focused"
+        },
+        {
+          "name": "SNC_CMP_RDE#SHOELACE_BUTTON_BLUR",
+          "description": "Emitted when the button loses focus.",
+          "label": "Blurred"
+        },
+        {
+          "name": "SNC_CMP_RDE#BUTTON_CLICKED",
+          "description": "Emitted when the button is clicked.",
+          "label": "Clicked"
+        }
+      ]
     }
   },
   "scopeName": "x_snc_cmp_rde"
