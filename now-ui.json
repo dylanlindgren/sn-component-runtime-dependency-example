@@ -1,15 +1,22 @@
 {
   "components": {
-    "sn-component-runtime-dependency-example": {
+    "snc-wds-runtime-dependency-example": {
+      "properties": [
+        {
+          "name": "message",
+          "label": "Message",
+          "required": true,
+          "fieldType": "table_name",
+          "description": "The message to put into the marquee",
+          "defaultValue": "This is an example web component imported through a script tag."
+        }
+      ],
       "innerComponents": [],
       "uiBuilder": {
-        "associatedTypes": [
-          "global.core",
-          "global.landing-page"
-        ],
-        "label": "My Component",
-        "tileIcon": "./tile-icon/generic-tile-icon.svg",
-        "description": "A description of my component",
+        "associatedTypes": ["global.core", "global.landing-page"],
+        "label": "Marquee Web Component",
+        "tileIcon": "./tile-icon/Marquee.svg",
+        "description": "The Marquee Tag as a Web Component",
         "category": "primitives"
       }
     }

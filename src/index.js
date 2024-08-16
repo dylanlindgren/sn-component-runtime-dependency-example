@@ -1,1 +1,1 @@
-import './sn-component-runtime-dependency-example';
+import './snc-wds-runtime-dependency-example';
