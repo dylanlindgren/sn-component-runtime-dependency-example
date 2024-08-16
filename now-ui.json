@@ -6,7 +6,7 @@
           "name": "message",
           "label": "Message",
           "required": true,
-          "fieldType": "table_name",
+          "fieldType": "string",
           "description": "The message to put into the marquee",
           "defaultValue": "This is an example web component imported through a script tag."
         }
